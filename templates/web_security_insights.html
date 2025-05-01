@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Security Insights</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+      }
+      header {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+      .vuln-section {
+        background-color: white;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        padding: 20px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      }
+      .vuln-section h2 {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      .vuln-section ul {
+        list-style: none;
+        padding-left: 20px;
+      }
+      .vuln-section ul li {
+        margin-bottom: 8px;
+      }
+      .ref {
+        margin-top: 15px;
+      }
+      .ref a {
+        text-decoration: none;
+        color: #007bff;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Web Application Security Insights</h1>
+    </header>
+    <div class="container">
+      {% for vuln in vulnerabilities %}
+      <div class="vuln-section">
+        <h2>{{ loop.index }}. {{ vuln.name }}</h2>
+        <p><strong>What is it?</strong> {{ vuln.description }}</p>
+        <pre>{{ vuln.payload }}</pre>
+        <ul>
+          {% for prevention in vuln.prevention %}
+          <li>{{ prevention }}</li>
+          {% endfor %}
+        </ul>
+        <div class="ref">
+          <a href="{{ vuln.reference }}">Reference</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>

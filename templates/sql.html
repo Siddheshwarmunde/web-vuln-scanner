@@ -1,0 +1,23 @@
+<!-- sql.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SQL Injection Scan</title>
+  </head>
+  <body>
+    <h1>SQL Injection Scanner</h1>
+    <form action="/scan_sql" method="post">
+      <label for="url">Enter URL for SQL Injection Scan:</label><br />
+      <input
+        type="url"
+        id="url"
+        name="url"
+        placeholder="http://example.com/search?q="
+        required
+      /><br /><br />
+      <input type="submit" value="Scan SQL Injection" />
+    </form>
+  </body>
+</html>

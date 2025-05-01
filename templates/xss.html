@@ -1,0 +1,23 @@
+<!-- xss.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XSS Scan</title>
+  </head>
+  <body>
+    <h1>Cross-Site Scripting (XSS) Scanner</h1>
+    <form action="/scan_xss" method="post">
+      <label for="url">Enter URL for XSS Scan:</label><br />
+      <input
+        type="url"
+        id="url"
+        name="url"
+        placeholder="http://example.com/search?q="
+        required
+      /><br /><br />
+      <input type="submit" value="Scan XSS" />
+    </form>
+  </body>
+</html>

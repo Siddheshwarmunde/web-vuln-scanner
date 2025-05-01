@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Vulnerability Scanner</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+
+      header {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      h2,
+      h3 {
+        text-align: center;
+        color: #333;
+        margin-top: 30px;
+      }
+
+      form {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+      }
+
+      input[type="url"] {
+        padding: 12px;
+        width: 60%;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      .vulnerability-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        padding: 10px 20px 40px;
+      }
+
+      .vulnerability-list button {
+        width: 80%;
+        padding: 14px;
+        background-color: #28a745;
+        color: white;
+        font-size: 18px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .vulnerability-list button:hover {
+        background-color: #218838;
+      }
+
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+        font-size: 14px;
+        margin-top: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Web Vulnerability Scanner</h1>
+    </header>
+
+    <h2>Enter URL to Scan</h2>
+    <form id="scanForm">
+      <input type="url" name="url" placeholder="Enter website URL" required />
+    </form>
+
+    <h3>Choose Vulnerability Type</h3>
+    <div class="vulnerability-list">
+      <button onclick="submitForm('SQL Injection')">
+        Scan for SQL Injection
+      </button>
+      <button onclick="submitForm('Cross-Site Scripting (XSS)')">
+        Scan for XSS
+      </button>
+      <button onclick="submitForm('Server-Side Request Forgery (SSRF)')">
+        Scan for SSRF
+      </button>
+
+      <button onclick="submitForm('Open Redirect')">
+        Scan for Open Redirect
+      </button>
+      <button onclick="submitForm('Command Injection')">
+        Scan for Command Injection
+      </button>
+      <button onclick="submitForm('Path Traversal')">
+        Scan for Path Traversal
+      </button>
+      <button onclick="submitForm('All')">Scan All Vulnerabilities</button>
+    </div>
+
+    <footer>© 2025 Siddheshwar Munde. All rights reserved.</footer>
+
+    <script>
+      function submitForm(vulnerabilityType) {
+        const urlInput = document.querySelector('input[name="url"]').value;
+        if (!urlInput) {
+          alert("Please enter a URL to scan.");
+          return;
+        }
+
+        const form = document.createElement("form");
+        form.method = "POST";
+        form.action = "/scan";
+
+        const urlField = document.createElement("input");
+        urlField.type = "hidden";
+        urlField.name = "url";
+        urlField.value = urlInput;
+        form.appendChild(urlField);
+
+        const vulnField = document.createElement("input");
+        vulnField.type = "hidden";
+        vulnField.name = "vulnerability";
+        vulnField.value = vulnerabilityType;
+        form.appendChild(vulnField);
+
+        document.body.appendChild(form);
+        form.submit();
+      }
+    </script>
+  </body>
+</html>

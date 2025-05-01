@@ -1,0 +1,48 @@
+/* General Button Style */
+button {
+  padding: 10px;
+  background-color: #28a745 !important; /* Green color for success buttons */
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block; /* Makes buttons stack vertically */
+  text-align: center;
+  width: 80%; /* Adjust width to avoid stretching */
+  margin: 10px auto; /* Adds margin between buttons */
+}
+
+button:hover {
+  background-color: #218838 !important; /* Darker green on hover */
+}
+
+/* Styles for specific buttons in Vulnerability Section and Scan Results */
+.vulnerability-list li .btn-danger {
+  background-color: #dc3545 !important; /* Red color for vulnerability-specific buttons */
+}
+
+.vulnerability-list li .btn-danger:hover {
+  background-color: #c82333 !important; /* Darker red on hover */
+}
+
+/* Back Button */
+.back-btn {
+  background-color: #007bff !important; /* Blue color for back button */
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  text-decoration: none; /* Remove underline */
+  display: inline-block;
+  width: auto;
+}
+
+.back-btn:hover {
+  background-color: #0056b3 !important; /* Darker blue on hover */
+}
+
+/* Ensure table buttons are styled correctly */
+table td .btn {
+  margin: 5px 0;
+}

@@ -1,0 +1,23 @@
+<!-- path_traversal.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Path Traversal Scan</title>
+  </head>
+  <body>
+    <h1>Path Traversal Scanner</h1>
+    <form action="/scan_path_traversal" method="post">
+      <label for="url">Enter URL for Path Traversal Scan:</label><br />
+      <input
+        type="url"
+        id="url"
+        name="url"
+        placeholder="http://example.com/page?file="
+        required
+      /><br /><br />
+      <input type="submit" value="Scan Path Traversal" />
+    </form>
+  </body>
+</html>

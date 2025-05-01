@@ -1,0 +1,23 @@
+<!-- open_redirect.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Redirect Scan</title>
+  </head>
+  <body>
+    <h1>Open Redirect Scanner</h1>
+    <form action="/scan_open_redirect" method="post">
+      <label for="url">Enter URL for Open Redirect Scan:</label><br />
+      <input
+        type="url"
+        id="url"
+        name="url"
+        placeholder="http://example.com/redirect?next="
+        required
+      /><br /><br />
+      <input type="submit" value="Scan Open Redirect" />
+    </form>
+  </body>
+</html>

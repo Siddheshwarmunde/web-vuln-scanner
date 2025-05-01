@@ -1,0 +1,23 @@
+<!-- ssrf.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SSRF Scan</title>
+  </head>
+  <body>
+    <h1>Server-Side Request Forgery (SSRF) Scanner</h1>
+    <form action="/scan_ssrf" method="post">
+      <label for="url">Enter URL for SSRF Scan:</label><br />
+      <input
+        type="url"
+        id="url"
+        name="url"
+        placeholder="http://example.com/api?url="
+        required
+      /><br /><br />
+      <input type="submit" value="Scan SSRF" />
+    </form>
+  </body>
+</html>

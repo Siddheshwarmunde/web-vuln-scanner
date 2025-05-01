@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Protection Measures</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f7f9fc;
+        margin: 0;
+        padding: 0;
+      }
+
+      .container {
+        width: 85%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 50px 20px;
+      }
+
+      h1 {
+        font-size: 36px;
+        color: #333;
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 30px;
+      }
+
+      .vuln-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 50px;
+      }
+
+      .vuln-buttons a {
+        background-color: #28a745;
+        color: white;
+        padding: 15px 30px;
+        font-size: 18px;
+        border-radius: 6px;
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+        transition: background-color 0.3s;
+      }
+
+      .vuln-buttons a:hover {
+        background-color: #218838;
+      }
+
+      .back-btn {
+        display: block;
+        margin: 30px auto;
+        text-align: center;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        font-size: 18px;
+        border-radius: 6px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+      }
+
+      .back-btn:hover {
+        background-color: #0056b3;
+      }
+
+      /* Media Queries */
+      @media (max-width: 768px) {
+        .vuln-buttons {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Protection Measures - OWASP Top 10 Vulnerabilities</h1>
+
+      <h2>Learn How to Prevent the Top 10 OWASP Vulnerabilities</h2>
+
+      <div class="vuln-buttons">
+        <a href="/prevention/a1">A1: Injection Prevention</a>
+        <a href="/prevention/a2">A2: Broken Authentication Prevention</a>
+        <a href="/prevention/a3">A3: Sensitive Data Exposure Prevention</a>
+        <a href="/prevention/a4">A4: XML External Entities (XXE) Prevention</a>
+        <a href="/prevention/a5">A5: Broken Access Control Prevention</a>
+        <a href="/prevention/a6">A6: Security Misconfiguration Prevention</a>
+        <a href="/prevention/a7">A7: Cross-Site Scripting (XSS) Prevention</a>
+        <a href="/prevention/a8">A8: Insecure Deserialization Prevention</a>
+        <a href="/prevention/a9"
+          >A9: Using Components with Known Vulnerabilities Prevention</a
+        >
+        <a href="/prevention/a10"
+          >A10: Insufficient Logging & Monitoring Prevention</a
+        >
+      </div>
+
+      <a href="/" class="back-btn">Back to Home</a>
+    </div>
+  </body>
+</html>
